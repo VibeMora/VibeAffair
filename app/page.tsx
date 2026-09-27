@@ -19,7 +19,7 @@ export default function Home() {
         {/* <WhyChooseSection /> */}
         <VenueX />
         {/* <SnapSection /> */}
-        <Testimonials />
+        {/* <Testimonials /> */}
         <CTAFooter />
       </main>
     </>

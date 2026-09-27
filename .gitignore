@@ -1,0 +1,107 @@
+# Dependencies
+/node_modules
+/.pnp
+.pnp.js
+.pnpm-store
+
+# Testing
+/coverage
+
+# Next.js & Build Outputs
+/.next/
+/out/
+/build
+/dist
+.turbo
+
+# Deployment Platforms
+.vercel
+.netlify
+
+# Environment Variables & Secrets
+.env
+.env*.local
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.*
+!.env.example
+!.env.*.example
+!.env.template
+
+# Admin Authentication & Local Data Stores
+/data/*
+!/data/.gitkeep
+data/admin-auth.json
+admin-auth.json
+*.sqlite
+*.sqlite3
+*.db
+*.dump
+*.backup
+
+# Security, Keys & Credentials
+*.pem
+*.key
+*.cert
+*.crt
+*.pfx
+*.p12
+*.keystore
+*.jks
+*.token
+credentials.json
+client_secret*.json
+service-account*.json
+firebase-adminsdk*.json
+
+# Debug & Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# TypeScript
+*.tsbuildinfo
+next-env.d.ts
+
+# Temporary, Scratch & Cache Files
+scratch/
+scratch/*
+*.tmp
+*.temp
+*.bak
+*.sw?
+.cache/
+
+# Operating System Files
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.stackdump
+
+# IDE & Editor Configurations
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sublime-workspace
+*.sublime-project
+.cursor/
+.windsurf/
+.claude/
+.gemini/

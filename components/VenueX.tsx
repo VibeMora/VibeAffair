@@ -42,11 +42,10 @@ const allLogos = [...row1Logos, ...row2Logos, ...row3Logos];
 
 export default function VenueX() {
   return (
-    <section className="website-bg py-20 overflow-hidden relative border-t border-b border-zinc-100">
-      <div className="max-w-7xl mx-auto px-6 lg:px-12 mb-16 text-center">
-        
+    <section className="website-bg py-14 sm:py-16 md:py-20 lg:py-24 overflow-hidden relative">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 mb-10 sm:mb-12 md:mb-16 text-center">
         <motion.h2
-          className="header-css"
+          className="header-css mb-3 sm:mb-4"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -55,7 +54,7 @@ export default function VenueX() {
           Vibing Across Venues
         </motion.h2>
         <motion.span
-          className="text-zinc-400 font-subtitle font-sans text-xs tracking-[0.3em] uppercase mt-4"
+          className="text-zinc-400 font-subtitle font-sans text-xs tracking-[0.25em] sm:tracking-[0.3em] uppercase block mt-2 sm:mt-4"
           initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -63,28 +62,57 @@ export default function VenueX() {
         >
           Our Partner Locations
         </motion.span>
-       
       </div>
 
-      <div className="max-w-7xl mx-auto px-1 lg:px-12 grid grid-cols-9 gap-2">
+      {/* Responsive Partner Locations Grid */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 grid grid-cols-3 sm:grid-cols-6 lg:grid-cols-9 gap-2.5 sm:gap-3 lg:gap-3.5">
         {allLogos.map((logo, index) => (
           <motion.div
             key={`${logo.name}-${index}`}
-            className="flex w-full aspect-square items-center justify-center p-0 sm:p-1 bg-white rounded-xl shadow-[0_2px_10px_rgba(0,0,0,0.03)] border border-zinc-100 hover:border-yellow-500/20 hover:scale-105 hover:shadow-md transition-all duration-300 cursor-pointer"
-            initial={{ opacity: 0, y: 20 }}
+            className="flex w-full aspect-square items-center justify-center p-2.5 sm:p-2 md:p-2.5 lg:p-3 bg-white rounded-xl shadow-[0_2px_10px_rgba(0,0,0,0.03)] border border-zinc-100 hover:border-zinc-200 hover:shadow-md transition-all duration-300 cursor-pointer group"
+            initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: Math.min(index * 0.03, 0.4) }}
+            transition={{ duration: 0.4, delay: Math.min((index % 9) * 0.03, 0.3) }}
           >
             <img
               src={logo.src}
               alt={logo.name}
-              className="max-w-full max-h-full p-[0.25px] sm:p-1 object-contain filter transition-all duration-300"
+              className="max-w-full max-h-full object-contain filter group-hover:scale-105 transition-transform duration-300"
               draggable={false}
             />
           </motion.div>
         ))}
       </div>
+
+      {/* Last Line Heading */}
+      <motion.h2
+        className="text-lilac-900 font-heading text-xl sm:text-2xl md:text-3xl lg:text-4xl font-light leading-snug sm:leading-relaxed max-w-4xl mx-auto text-center px-4 pt-10 md:pt-14"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+      >
+        We've worked wherever the <strong className="italic">celebration wanted to be</strong>
+      </motion.h2>
+
+      {/* India Map with Pinned Locations */}
+      <motion.div
+        className="mt-6 sm:mt-8 md:mt-10 flex flex-col items-center justify-center px-4"
+        initial={{ opacity: 0, y: 25 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+      >
+        <div className="relative w-full max-w-[300px] sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl mx-auto flex items-center justify-center">
+          <img
+            src="/india-map-transparent.png"
+            alt="Map of India showing Vibe Affair event locations"
+            className="w-full h-auto object-contain drop-shadow-sm select-none pointer-events-none"
+            draggable={false}
+          />
+        </div>
+      </motion.div>
     </section>
   );
 }

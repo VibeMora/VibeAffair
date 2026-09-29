@@ -20,7 +20,7 @@ export default function StorySection() {
   return (
     <section id="story" className="website-bg overflow-hidden">
       {/* ==================== HEADING SECTION ==================== */}
-      <div className="max-w-7xl mx-auto pt-8 px-6 lg:px-12 text-center">
+      <div className="website-bg max-w-7xl mx-auto pt-8 px-6 lg:px-12 text-center">
         <motion.div
           id="comp-ly6ycl0u15"
           className="N8MGzv _v6ohL ZS_qLz PO9MfV comp-ly6ycl0u15 wixui-rich-text inline-block"
@@ -112,10 +112,10 @@ export default function StorySection() {
           >
 
 
-            <h2 className="text-white font-heading text-2xl md:text-3xl lg:text-4xl italic font-light leading-relaxed max-w-8xl">
+            <h2 className="text-white font-heading text-2xl md:text-3xl lg:text-4xl font-light leading-relaxed max-w-8xl">
               <div className="text-white/20 mb-16">
                 <Quote size={56} fill="currentColor" className="opacity-45 rotate-180 absolute -left-8 -top-0 transform" />
-              </div> Trust the process, follow your heart, & believe that when you take a <strong className=" text-darker-lilac font-semibold text-[#f4d24a] border-b border-[#f4d24a]/25">leap of faith</strong>, the Universe will <strong className=" text-darker-lilac font-semibold text-white border-b border-white/25">catch you</strong>.
+              </div> Trust the process, follow your heart, & believe that when you take a <strong className=" text-darker-lilac font-semibold text-[#f4d24a] italic border-b border-[#f4d24a]/25">leap of faith</strong>, the Universe will <strong className=" text-darker-lilac italic font-semibold text-white border-b border-white/25">catch you</strong>.
             </h2>
 
 
@@ -245,10 +245,10 @@ export default function StorySection() {
           >
 
 
-            <h2 className="text-white font-heading text-2xl md:text-3xl lg:text-4xl italic font-light leading-relaxed max-w-8xl">
+            <h2 className="text-white font-heading text-2xl md:text-3xl lg:text-4xl font-light leading-relaxed max-w-8xl">
               <div className="text-white/20 mb-16">
                 <Quote size={56} fill="currentColor" className="opacity-45 rotate-180 absolute -left-8 -top-0 transform" />
-              </div> "And every day, I'm grateful that the Universe trusted me with this dream."
+              </div> And every day, I'm grateful that the <strong className=" text-darker-lilac font-semibold text-[#f4d24a] italic border-b border-[#f4d24a]/25">Universe</strong>  trusted me with this dream.
             </h2>
 
           </motion.div>
@@ -257,6 +257,7 @@ export default function StorySection() {
       
     </section>
   );
+  // fbf4f6
 }
 // #9a719d
 // rgb(255 251 246)

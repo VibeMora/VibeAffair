@@ -64,7 +64,7 @@ export default function Navbar({
         }
 
         // 2. Check known light containers
-        if (contentEl.closest('#portfolio, #story, #snap, [data-theme="light"], .theme-light, .bg-\\[\\#faf9f6\\]')) {
+        if (contentEl.closest('#portfolio, #story, #snap, [data-theme="light"], .theme-light, .bg-\\[\\#faf9f6\\], .website-bg')) {
           setIsDarkUnderneath(false);
           return;
         }
@@ -115,7 +115,7 @@ export default function Navbar({
 
   const links = [
     { label: 'THE JOURNEY', href: '/our-journey' },
-    { label: 'GALLERY', href: '/gallery' },
+    // { label: 'GALLERY', href: '/gallery' },
   ];
 
   // Colors purely dynamic based on underlying theme

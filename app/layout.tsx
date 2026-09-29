@@ -37,6 +37,18 @@ export const metadata: Metadata = {
   metadataBase: new URL('http://localhost:3000'),
   title: 'Vibe Affair | Premium Event Planners',
   description: 'Breaking free from the ordinary to create extraordinary, deeply personal event experiences.',
+  icons: {
+    icon: [
+      { url: '/favicon.ico' },
+      { url: '/favicon.png', type: 'image/png' },
+      { url: '/VALogos/logo-cropped.png', sizes: '32x32', type: 'image/png' },
+      { url: '/VALogos/logo-cropped.png', sizes: '192x192', type: 'image/png' },
+    ],
+    apple: [
+      { url: '/VALogos/logo-cropped.png', sizes: '180x180', type: 'image/png' },
+    ],
+    shortcut: ['/favicon.ico'],
+  },
   openGraph: {
     images: [
       {

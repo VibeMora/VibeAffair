@@ -264,7 +264,7 @@ export default function Testimonials({
   };
 
   return (
-    <section className={`w-full website-bg py-16 sm:py-20 md:py-24 overflow-hidden ${className}`}>
+    <section className={`w-full website-bg mb-8 overflow-hidden ${className}`}>
       {/* SECTION TITLE */}
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 mb-8 sm:mb-10 text-center">
         <h3 className="header-css pb-4">

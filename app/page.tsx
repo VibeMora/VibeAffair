@@ -14,13 +14,13 @@ export default function Home() {
     <>
       <Navbar />
       <main className="overflow-hidden website-bg">
-        <StorySection />
+        {/* <StorySection /> */}
         {/* <HeroSection />  */}
-         {/* <PortfolioSection /> 
-        <WhyChooseSection /> */}
+        {/* <PortfolioSection /> */}
         <VenueX />
         {/* <SnapSection /> */}
         <Testimonials />
+        {/* <WhyChooseSection /> */}
         <LeaveAsFamily/>
         <CTAFooter />
       </main>

@@ -85,34 +85,37 @@ export default function VenueX() {
         ))}
       </div>
 
-      {/* Last Line Heading */}
-      <motion.h2
-        className="text-lilac-900 font-heading text-xl sm:text-2xl md:text-3xl lg:text-4xl font-light leading-snug sm:leading-relaxed max-w-4xl mx-auto text-center px-4 pt-10 md:pt-14"
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6 }}
-      >
-        We've worked wherever the <strong className="italic">celebration wanted to be</strong>
-      </motion.h2>
+      {/* Side-by-side Heading & India Map */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 pt-10 md:pt-14 flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12">
+        {/* Last Line Heading */}
+        <motion.h2
+          className="header-css w-full md:w-1/2 text-zinc-500 font-heading text-xl sm:text-2xl md:text-3xl lg:text-4xl font-light leading-snug sm:leading-relaxed text-center md:!text-left px-4"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          We've worked wherever the <span className="italic text-lilac-900">celebration wanted to be</span>
+        </motion.h2>
 
-      {/* India Map with Pinned Locations */}
-      <motion.div
-        className="mt-6 sm:mt-8 md:mt-10 flex flex-col items-center justify-center px-4"
-        initial={{ opacity: 0, y: 25 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8, delay: 0.2 }}
-      >
-        <div className="relative w-full max-w-[300px] sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl mx-auto flex items-center justify-center">
-          <img
-            src="/india-map-transparent.png"
-            alt="Map of India showing Vibe Affair event locations"
-            className="w-full h-auto object-contain drop-shadow-sm select-none pointer-events-none"
-            draggable={false}
-          />
-        </div>
-      </motion.div>
+        {/* India Map with Pinned Locations */}
+        <motion.div
+          className="w-full md:w-1/2 flex flex-col items-center justify-center px-4"
+          initial={{ opacity: 0, y: 25 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+        >
+          <div className="relative w-full max-w-[300px] sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl mx-auto flex items-center justify-center">
+            <img
+              src="/india-map-transparent.png"
+              alt="Map of India showing Vibe Affair event locations"
+              className="w-full h-auto object-contain drop-shadow-sm select-none pointer-events-none"
+              draggable={false}
+            />
+          </div>
+        </motion.div>
+      </div>
     </section>
   );
 }

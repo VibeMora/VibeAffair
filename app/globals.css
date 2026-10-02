@@ -134,6 +134,10 @@
     font-size: 1.125rem;
   }
 }
+.text-zinc-500
+{
+  color: rgb(113 113 122 / var(--tw-text-opacity)) !important;
+}
 
 .tracking-wide {
   letter-spacing: 0.125em;
@@ -229,27 +233,6 @@
 @media (prefers-reduced-motion: reduce) {
   .animate-testimonial-marquee {
     animation-play-state: paused !important;
-  }
-}
-
-/* Responsive background attachment for founder quote sections:
-   Prevents the iOS WebKit bug where `background-attachment: fixed`
-   causes `background-size: cover` to scale to the entire document height,
-   creating extreme magnification on iPhones and iPads. */
-.founder-parallax-bg {
-  background-attachment: scroll;
-}
-
-@media (hover: hover) and (pointer: fine) and (min-width: 768px) {
-  .founder-parallax-bg {
-    background-attachment: fixed;
-  }
-}
-
-/* Explicit safeguard for iOS/iPadOS WebKit devices */
-@supports (-webkit-touch-callout: none) {
-  .founder-parallax-bg {
-    background-attachment: scroll !important;
   }
 }
 

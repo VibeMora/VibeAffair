@@ -43,9 +43,9 @@ export default function LeaveAsFamily({
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           className="font-heading font-normal text-4xl sm:text-5xl md:text-6xl lg:text-[4.75rem] leading-[1.16] sm:leading-[1.14] tracking-[-0.015em] text-lilac-900"
         >
-          <span className="block">{headlineLine1}</span>
-          <span className="block mt-1 sm:mt-1.5">{headlineLine2}</span>
-          <span className="block italic text-darker-lilac mt-1 sm:mt-2 font-serif">
+          <span className="block text-zinc-500">{headlineLine1}</span>
+          <span className="block mt-1 sm:mt-1.5 text-zinc-500">{headlineLine2}</span>
+          <span className="block italic text-lilac-900 mt-1 sm:mt-2 font-serif">
             {headlineLine3}
           </span>
         </motion.h2>

@@ -1,37 +1,5 @@
 import './globals.css';
 import type { Metadata } from 'next';
-import { Inter, Playfair_Display, Lora, Great_Vibes } from 'next/font/google';
-
-const inter = Inter({ 
-  subsets: ['latin'],
-  variable: '--font-sans',
-  display: 'swap',
-  fallback: ['system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'sans-serif'],
-});
-
-const playfairDisplay = Playfair_Display({
-  subsets: ['latin'],
-  variable: '--font-serif-display',
-  display: 'swap',
-  style: ['normal', 'italic'],
-  fallback: ['Georgia', 'Cambria', 'serif'],
-});
-
-const lora = Lora({
-  subsets: ['latin'],
-  variable: '--font-serif-body',
-  display: 'swap',
-  style: ['normal', 'italic'],
-  fallback: ['Georgia', 'Cambria', 'serif'],
-});
-
-const greatVibes = Great_Vibes({
-  subsets: ['latin'],
-  variable: '--font-signature',
-  weight: ['400'],
-  display: 'swap',
-  fallback: ['cursive', 'sans-serif'],
-});
 
 export const metadata: Metadata = {
   metadataBase: new URL('http://localhost:3000'),
@@ -73,7 +41,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.variable} ${playfairDisplay.variable} ${lora.variable} ${greatVibes.variable} font-sans antialiased`}>
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap"
+          rel="stylesheet"
+        />
+      </head>
+      <body className="font-sans antialiased">
         {children}
       </body>
     </html>

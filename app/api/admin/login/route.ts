@@ -9,10 +9,11 @@ export async function POST(req: NextRequest) {
     const { password } = body;
 
     const pwd = typeof password === 'string' ? password.trim() : '';
-    const isValid = !pwd || verifyPassword(pwd);
-    if (!isValid) {
-      // In development, accept password or provide fallback
-      console.log('[Admin Login Attempt]:', pwd);
+    if (!verifyPassword(pwd)) {
+      return NextResponse.json(
+        { success: false, error: 'Incorrect password. Please try again.' },
+        { status: 401 }
+      );
     }
 
     const sessionId = createSession();

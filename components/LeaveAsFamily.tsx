@@ -82,7 +82,7 @@ export default function LeaveAsFamily({
             href={ctaHref}
             className="group inline-flex flex-col items-center cursor-pointer focus:outline-none"
           >
-            <span className="font-sans text-xs sm:text-sm uppercase tracking-[0.20em] text-zinc-900 hover:text-lilac-900 transition-colors duration-300 flex items-center gap-2">
+            <span className="font-sans text-xs sm:text-sm uppercase tracking-[0.20em] text-lilac-900 hover:text-zinc-800 transition-colors duration-300 flex items-center gap-2">
               <span>{ctaText}</span>
               <span className="inline-block transition-transform duration-300 group-hover:translate-x-1.5">
                 &rarr;

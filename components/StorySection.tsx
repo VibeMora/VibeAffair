@@ -175,7 +175,7 @@ export default function StorySection() {
       <div className="w-full relative min-h-[120vh] flex items-center justify-center py-20 px-6 md:px-12 bg-zinc-900 overflow-hidden">
         {/* Background Image - colourful & fixed on desktop, responsive scroll on iOS/mobile */}
         <div
-          className="absolute inset-0 bg-cover bg-center opacity-40 pointer-events-none founder-parallax-bg"
+          className="absolute inset-0 bg-cover bg-[41%_center] md:bg-center opacity-40 pointer-events-none founder-parallax-bg"
           style={{ backgroundImage: `url('/Founder/Image3.jpeg')` }}
         />
         {/* Dark overlay to ensure contrast and readability for the white text */}

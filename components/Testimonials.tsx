@@ -375,9 +375,6 @@ export default function Testimonials({
                 <p className="text-white text-sm font-semibold leading-tight">
                   {activeVideo.name}
                 </p>
-                <p className="text-zinc-400 text-xs leading-tight font-subtitle">
-                  {activeVideo.role}, {activeVideo.company}
-                </p>
               </div>
               <a
                 href={normalizeMediaUrl(activeVideo.videoUrl || activeVideo.videoSrc || '')}

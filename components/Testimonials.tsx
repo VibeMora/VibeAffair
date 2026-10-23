@@ -29,10 +29,21 @@ export interface TestimonialItem {
  */
 export const normalizeMediaUrl = (url: string) => {
   if (!url) return '';
-  if (url.startsWith('public/')) {
-    return '/' + url.slice(7);
+  let cleanUrl = url.trim();
+  if (cleanUrl.startsWith('public/')) {
+    cleanUrl = '/' + cleanUrl.slice(7);
   }
-  return url;
+  if (!cleanUrl.startsWith('http://') && !cleanUrl.startsWith('https://')) {
+    cleanUrl = cleanUrl.replace(/\/+/g, '/');
+    if (!cleanUrl.startsWith('/')) {
+      cleanUrl = '/' + cleanUrl;
+    }
+    return cleanUrl
+      .split('/')
+      .map((seg) => encodeURIComponent(decodeURIComponent(seg)))
+      .join('/');
+  }
+  return cleanUrl;
 };
 
 /**
@@ -71,8 +82,8 @@ export const defaultTestimonials: TestimonialItem[] = [
     role: 'Founder',
     company: 'NextGen Creative',
     thumbnail: '/Testimonial Thumbnails/08.png',
-    videoUrl: '/Testimonial videos//Yash&Rucha.mov',
-    videoSrc: '/Testimonial videos/Yash&Rucha.mov',
+    videoUrl: '/Testimonial videos/Yash&Rucha.mp4',
+    videoSrc: '/Testimonial videos/Yash&Rucha.mp4',
   
 
 
@@ -98,8 +109,8 @@ export const defaultTestimonials: TestimonialItem[] = [
     company: 'Prime Inc.',
     thumbnail: '/Testimonial Thumbnails/01.png',
     // Reference to your local video in public/Testimonial videos/
-    videoUrl: '/Testimonial videos/Bride & Groom Dads_YRWedding.mov',
-    videoSrc: '/Testimonial videos/Bride & Groom Dads_YRWedding.mov',
+    videoUrl: '/Testimonial videos/Bride & Groom Dads_YRWedding.mp4',
+    videoSrc: '/Testimonial videos/Bride & Groom Dads_YRWedding.mp4',
     //  //
   },
   {
@@ -108,8 +119,8 @@ export const defaultTestimonials: TestimonialItem[] = [
     role: 'CEO',
     company: 'Insinious Inc.',
     thumbnail: '/Testimonial Thumbnails/04.png',
-    videoUrl: '/Testimonial videos/Luv Chaturvedi_AAWedding.mov',
-    videoSrc: '/Testimonial videos/Luv Chaturvedi_AAWedding.mov',
+    videoUrl: '/Testimonial videos/Luv Chaturvedi_AAWedding.mp4',
+    videoSrc: '/Testimonial videos/Luv Chaturvedi_AAWedding.mp4',
     // - Executive Director & CEO ( Reliance Securities )
 
   },
@@ -342,12 +353,17 @@ export default function Testimonials({
             ) : (
               <div className="w-full flex items-center justify-center bg-black">
                 <video
-                  src={normalizeMediaUrl(activeVideo.videoUrl || activeVideo.videoSrc || '')}
+                  key={normalizeMediaUrl(activeVideo.videoUrl || activeVideo.videoSrc || '')}
                   controls
                   autoPlay
                   playsInline
+                  preload="auto"
                   className="w-full max-h-[75vh] object-contain"
                 >
+                  <source
+                    src={normalizeMediaUrl(activeVideo.videoUrl || activeVideo.videoSrc || '')}
+                    type="video/mp4"
+                  />
                   Your browser does not support the video tag.
                 </video>
               </div>
@@ -364,7 +380,7 @@ export default function Testimonials({
                 </p>
               </div>
               <a
-                href={normalizeMediaUrl(activeVideo.videoUrl)}
+                href={normalizeMediaUrl(activeVideo.videoUrl || activeVideo.videoSrc || '')}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-xs text-[#a78bfa] hover:text-[#c4b5fd] underline underline-offset-2"

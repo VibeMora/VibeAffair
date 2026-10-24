@@ -130,13 +130,13 @@ export const defaultTestimonials: TestimonialItem[] = [
     role: 'COO',
     company: 'Prime Inc.',
     thumbnail: '/Testimonial Thumbnails/03.png',
-    videoUrl: '/Testimonial videos/Groom_Mom_RMWedding.MP4',
-    videoSrc: '/Testimonial videos/Groom_Mom_RMWedding.MP4',
+    videoUrl: '/Testimonial videos/Groom_Mom_RMWedding.mp4',
+    videoSrc: '/Testimonial videos/Groom_Mom_RMWedding.mp4',
     //// 
   },
   {
     id: 7,
-    name: 'Mrs. Chitra Shinde ',
+    name:'Mrs.Rupali Chitnis' ,
     role: 'Founder',
     company: 'NextGen Creative',
     thumbnail: '/Testimonial Thumbnails/07.png',
@@ -145,7 +145,7 @@ export const defaultTestimonials: TestimonialItem[] = [
   },
   {
     id: 2,
-    name: 'Mrs.Rupali Chitnis',
+    name: 'Mrs. Chitra Shinde ',
     role: 'COO',
     company: 'Prime Inc.',
     thumbnail: '/Testimonial Thumbnails/02.png',

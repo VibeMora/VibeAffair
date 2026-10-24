@@ -35,39 +35,39 @@ export interface LandscapeVideoItem {
 const defaultVideos: LandscapeVideoItem[] = [
   {
     id: 1,
-    title: 'Cathedral Courtyard Arch',
-    category: 'Architecture',
-    videoSrc: '/Trailers/Rajas&ManaliTrailer.mov',
+    title: 'Rajas Vaidya & Manali Shinde',
+    category: 'MCA & Exotica, Mumbai',
+    videoSrc: '/Trailers/Rajas&ManaliTrailer.mp4',
     poster: '/Trailers Thumbnails/Rajas&Manali.png',
   },
   {
     id: 2,
-    title: 'Sula Vineyards Sunset Vows',
-    category: 'Destination',
+    title: 'Sai Abishek & Vedika Chitnis',
+    category: 'Sula Vineyards, Nashik',
     videoSrc: '/Trailers/Vedika & Sai  - The Wedding Trailer.mp4',
     poster: '/Trailers Thumbnails/Sai&Vedika.png',
   },
-  // {
-  //   id: 3,
-  //   title: 'Neon Sangeet Lights',
-  //   category: 'Celebration',
-  //   videoSrc: '/Testimonial videos/VIDEO-2026-04-27-12-55-59 (2).mp4',
-  //   poster: '/Testimonial Thumbnails/07.png',
-  // },
-  // {
-  //   id: 4,
-  //   title: 'Moments of Pure Joy',
-  //   category: 'Emotions',
-  //   videoSrc: '/Testimonial videos/Groom_Mom_RMWedding.mp4',
-  //   poster: '/Testimonial Thumbnails/03.png',
-  // },
-  // {
-  //   id: 5,
-  //   title: 'Heritage Palace Mandap',
-  //   category: 'Tradition',
-  //   videoSrc: '/Testimonial videos/Bride_Mom_RMWedding.MP4',
-  //   poster: '/Testimonial Thumbnails/02.png',
-  // },
+  {
+    id: 3,
+    title: 'Yash Kirkire & Rucha Vaidya',
+    category: 'NSCI, Mumbai',
+    videoSrc: '/Trailers/Yash&Rucha Film.mp4',
+    poster: '/Trailers Thumbnails/Yash&Rucha.png',
+  },
+  {
+    id: 4,
+    title: 'Maitreyee Dixit & Sisir Mannava',
+    category: 'Vijan Mahal, Jabalpur',
+    videoSrc: '/Trailers/Maitreyee&Sisir VA.mp4',
+    poster: '/Trailers Thumbnails/Maitreyee&Sisir.png',
+  },
+  {
+    id: 5,
+    title: 'Varun Iyer & Akanksha Kapoor',
+    category: 'Raymonds, Mumbai',
+    videoSrc: '/Trailers/Varun&Akanksha.mp4',
+    poster: '/Trailers Thumbnails/Varun&Akanksha.png',
+  },
   // {
   //   id: 6,
   //   title: 'Executive Royal Ceremony',
@@ -440,10 +440,7 @@ export default function AdminGallery({ onLogout }: AdminGalleryProps) {
   return (
     <div
       ref={containerRef}
-      className="fixed inset-0 w-screen h-screen overflow-hidden bg-black text-white flex flex-col justify-between items-center select-none z-50"
-      style={{
-        fontFamily: 'var(--font-sans), system-ui, -apple-system, sans-serif',
-      }}
+      className="fixed inset-0 w-screen h-screen overflow-hidden bg-black text-white flex flex-col justify-between items-center select-none z-50 font-sans"
     >
       {/* ==================== LILAC GLOW & STARDUST BACKGROUND ==================== */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden z-0">
@@ -522,16 +519,16 @@ export default function AdminGallery({ onLogout }: AdminGalleryProps) {
       </div>
           <Navbar/>
       {/* ==================== SLEEK FLOATING TOP BAR ==================== */}
-      <header className="relative z-40 w-full px-6 sm:px-10 py-24 flex items-center justify-between pointer-events-auto">
+      <header className="relative z-40 w-full px-6 sm:px-10 pt-20 pb-2 sm:pt-24 sm:pb-3 flex items-center justify-center pointer-events-auto">
        
         {/* Top Center: Minimal Page Counter */}
-        <div className="flex flex-col items-center">
-          <span className="text-[#9a719d] text-xs sm:text-sm font-semibold tracking-[0.2em] uppercase drop-shadow-[0_0_8px_rgba(154,113,157,0.4)]">
+        <div className="flex flex-col items-center text-center">
+          <span className="text-[#9a719d] text-xs sm:text-sm font-semibold tracking-[0.2em] uppercase drop-shadow-[0_0_8px_rgba(154,113,157,0.4)] font-sans">
             Admin Gallery
           </span>
-          <span className="text-zinc-500 text-[11px] font-mono mt-0.5 tracking-wider">
+          {/* <span className="text-zinc-500 text-[11px] font-mono mt-0.5 tracking-wider">
             {activeIndex + 1} / {videos.length}
-          </span>
+          </span> */}
         </div>
 
       </header>
@@ -668,7 +665,7 @@ export default function AdminGallery({ onLogout }: AdminGalleryProps) {
                 <div
                   onMouseEnter={() => isActive && setIsHoveringCenter(true)}
                   onMouseLeave={() => isActive && setIsHoveringCenter(false)}
-                  className={`relative w-[86vw] sm:w-[540px] md:w-[650px] lg:w-[740px] xl:w-[790px] aspect-[16/9] rounded-[24px] sm:rounded-[28px] overflow-hidden transition-all duration-500 bg-[#0e1014] ${
+                  className={`relative w-[86vw] sm:w-[540px] md:w-[650px] lg:w-[740px] xl:w-[790px] max-h-[50vh] sm:max-h-[52vh] md:max-h-[55vh] max-w-[calc(55vh*16/9)] aspect-[16/9] rounded-[24px] sm:rounded-[28px] overflow-hidden transition-all duration-500 bg-[#0e1014] ${
                     isActive
                       ? 'shadow-[0_0_40px_rgba(154,113,157,0.35),0_25px_70px_rgba(0,0,0,0.95)]'
                       : 'shadow-[0_15px_40px_rgba(0,0,0,0.85)] hover:brightness-110'
@@ -739,10 +736,10 @@ export default function AdminGallery({ onLogout }: AdminGalleryProps) {
                       <div className="w-16 h-16 rounded-full border border-[#9a719d]/30 flex items-center justify-center mb-3 bg-[#9a719d]/5 shadow-[0_0_20px_rgba(154,113,157,0.2)]">
                         <Film className="w-8 h-8 text-[#9a719d]" />
                       </div>
-                      <h4 className="text-[#dca2e0] font-serif text-lg sm:text-xl font-medium tracking-wide">
+                      <h4 className="text-[#dca2e0] font-playfair font-serif font-heading text-lg sm:text-xl font-normal tracking-wide">
                         {video.title}
                       </h4>
-                      <p className="text-zinc-500 text-xs mt-1 uppercase tracking-widest">
+                      <p className="text-white/80 font-sans text-xs mt-1 uppercase tracking-widest">
                         {video.category || 'Landscape Film'}
                       </p>
                     </div>
@@ -793,15 +790,15 @@ export default function AdminGallery({ onLogout }: AdminGalleryProps) {
                   {/* Active Card Bottom Subtitle / Info Banner (visible on hover or paused) */}
                   {isActive && (
                     <div
-                      className={`absolute bottom-3 left-6 right-6 z-20 flex items-center justify-between pointer-events-none transition-opacity duration-300 ${
+                      className={`absolute bottom-4 sm:bottom-5 md:bottom-6 left-6 right-6 z-20 flex items-center justify-between pointer-events-none transition-opacity duration-300 ${
                         isPlaying && !isHoveringCenter ? 'opacity-0' : 'opacity-100'
                       }`}
                     >
                       <div>
-                        <p className="text-white text-xs sm:text-sm font-semibold tracking-wide drop-shadow-md">
+                        <h3 className="text-white text-sm sm:text-base md:text-lg font-playfair font-serif font-heading font-normal tracking-wide drop-shadow-[0_2px_8px_rgba(0,0,0,0.85)]">
                           {video.title}
-                        </p>
-                        <p className="text-[#9a719d]/80 text-[10px] sm:text-xs font-mono tracking-widest uppercase mt-0.5">
+                        </h3>
+                        <p className="text-white/90 text-[10px] sm:text-xs font-sans tracking-[0.16em] uppercase mt-0.5 drop-shadow-sm">
                           {video.category || 'Landscape Film'}
                         </p>
                       </div>
@@ -815,7 +812,7 @@ export default function AdminGallery({ onLogout }: AdminGalleryProps) {
       </main>
 
       {/* ==================== MINIMAL FLOATING CONTROLS FOOTER ==================== */}
-      <footer className="relative z-40 w-full px-6 py-5 flex flex-col items-center gap-3 pointer-events-auto">
+      <footer className="relative z-40 w-full px-6 pt-1 pb-3 sm:pb-4 flex flex-col items-center gap-2 pointer-events-auto">
         {/* Timeline Scrubber Bar with Lilac Fill */}
         <div className="w-full max-w-xl flex items-center gap-4 px-3 py-2 rounded-full bg-black/60 border border-[#9a719d]/30 backdrop-blur-md shadow-[0_10px_30px_rgba(0,0,0,0.8)]">
           {/* Play/Pause Button */}
@@ -936,17 +933,17 @@ export default function AdminGallery({ onLogout }: AdminGalleryProps) {
 
               <div className="flex items-center gap-2 mb-1">
                 <Sparkles size={18} className="text-[#9a719d]" />
-                <h3 className="text-xl font-bold font-serif text-[#9a719d]">
+                <h3 className="text-xl font-playfair font-serif font-heading font-semibold text-[#9a719d]">
                   Add Landscape Video
                 </h3>
               </div>
-              <p className="text-zinc-400 text-xs mb-5">
+              <p className="text-zinc-400 text-xs mb-5 font-body">
                 Add a new landscape video to showcase in the luxury coverflow gallery
               </p>
 
               <form onSubmit={handleAddVideo} className="space-y-4">
                 <div>
-                  <label className="block text-xs font-medium text-[#9a719d] mb-1.5 uppercase tracking-wider">
+                  <label className="block text-xs font-medium text-[#9a719d] mb-1.5 uppercase tracking-wider font-sans">
                     Video Title *
                   </label>
                   <input
@@ -955,12 +952,12 @@ export default function AdminGallery({ onLogout }: AdminGalleryProps) {
                     value={newTitle}
                     onChange={(e) => setNewTitle(e.target.value)}
                     placeholder="e.g. Cathedral Courtyard Arch"
-                    className="w-full px-4 py-2.5 bg-black/50 border border-[#9a719d]/30 rounded-xl text-white text-sm focus:outline-none focus:border-[#9a719d]"
+                    className="w-full px-4 py-2.5 bg-black/50 border border-[#9a719d]/30 rounded-xl text-white text-sm focus:outline-none focus:border-[#9a719d] font-sans"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-xs font-medium text-[#9a719d] mb-1.5 uppercase tracking-wider">
+                  <label className="block text-xs font-medium text-[#9a719d] mb-1.5 uppercase tracking-wider font-sans">
                     Category Tag
                   </label>
                   <input
@@ -968,12 +965,12 @@ export default function AdminGallery({ onLogout }: AdminGalleryProps) {
                     value={newCategory}
                     onChange={(e) => setNewCategory(e.target.value)}
                     placeholder="e.g. Architecture, Destination, Highlights"
-                    className="w-full px-4 py-2.5 bg-black/50 border border-[#9a719d]/30 rounded-xl text-white text-sm focus:outline-none focus:border-[#9a719d]"
+                    className="w-full px-4 py-2.5 bg-black/50 border border-[#9a719d]/30 rounded-xl text-white text-sm focus:outline-none focus:border-[#9a719d] font-sans"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-xs font-medium text-[#9a719d] mb-1.5 uppercase tracking-wider">
+                  <label className="block text-xs font-medium text-[#9a719d] mb-1.5 uppercase tracking-wider font-sans">
                     Landscape Video URL / Path (Can leave blank)
                   </label>
                   <input
@@ -981,15 +978,15 @@ export default function AdminGallery({ onLogout }: AdminGalleryProps) {
                     value={newVideoSrc}
                     onChange={(e) => setNewVideoSrc(e.target.value)}
                     placeholder="e.g. /Testimonial videos/your-video.mp4 or leave blank"
-                    className="w-full px-4 py-2.5 bg-black/50 border border-[#9a719d]/30 rounded-xl text-white text-sm focus:outline-none focus:border-[#9a719d]"
+                    className="w-full px-4 py-2.5 bg-black/50 border border-[#9a719d]/30 rounded-xl text-white text-sm focus:outline-none focus:border-[#9a719d] font-sans"
                   />
-                  <p className="text-[11px] text-zinc-500 mt-1">
+                  <p className="text-[11px] text-zinc-500 mt-1 font-body">
                     Accepts MP4, MOV, or web streams. If left blank, a luxury monogram placeholder will be displayed.
                   </p>
                 </div>
 
                 <div>
-                  <label className="block text-xs font-medium text-[#9a719d] mb-1.5 uppercase tracking-wider">
+                  <label className="block text-xs font-medium text-[#9a719d] mb-1.5 uppercase tracking-wider font-sans">
                     Thumbnail Poster URL (Optional)
                   </label>
                   <input
@@ -997,7 +994,7 @@ export default function AdminGallery({ onLogout }: AdminGalleryProps) {
                     value={newPoster}
                     onChange={(e) => setNewPoster(e.target.value)}
                     placeholder="e.g. /Testimonial Thumbnails/01.png"
-                    className="w-full px-4 py-2.5 bg-black/50 border border-[#9a719d]/30 rounded-xl text-white text-sm focus:outline-none focus:border-[#9a719d]"
+                    className="w-full px-4 py-2.5 bg-black/50 border border-[#9a719d]/30 rounded-xl text-white text-sm focus:outline-none focus:border-[#9a719d] font-sans"
                   />
                 </div>
 
@@ -1005,13 +1002,13 @@ export default function AdminGallery({ onLogout }: AdminGalleryProps) {
                   <button
                     type="button"
                     onClick={() => setIsAddingVideo(false)}
-                    className="px-4 py-2 rounded-full bg-white/5 hover:bg-white/10 text-zinc-300 text-xs font-medium transition-colors cursor-pointer"
+                    className="px-4 py-2 rounded-full bg-white/5 hover:bg-white/10 text-zinc-300 text-xs font-medium transition-colors cursor-pointer font-sans"
                   >
                     Cancel
                   </button>
                   <button
                     type="submit"
-                    className="px-6 py-2 rounded-full bg-gradient-to-r from-[#9a719d] to-[#c293c6] hover:from-[#895f8c] hover:to-[#9a719d] text-white font-semibold text-xs transition-all shadow-[0_0_15px_rgba(154,113,157,0.4)] cursor-pointer"
+                    className="px-6 py-2 rounded-full bg-gradient-to-r from-[#9a719d] to-[#c293c6] hover:from-[#895f8c] hover:to-[#9a719d] text-white font-semibold text-xs transition-all shadow-[0_0_15px_rgba(154,113,157,0.4)] cursor-pointer font-sans"
                   >
                     Add Video
                   </button>
@@ -1038,10 +1035,10 @@ export default function AdminGallery({ onLogout }: AdminGalleryProps) {
             >
               <div className="flex items-center justify-between pb-4 border-b border-[#9a719d]/20">
                 <div>
-                  <h3 className="text-lg font-bold font-serif text-[#9a719d]">
+                  <h3 className="text-lg font-playfair font-serif font-heading font-semibold text-[#9a719d]">
                     All Gallery Cards ({videos.length})
                   </h3>
-                  <p className="text-xs text-zinc-400">
+                  <p className="text-xs text-zinc-400 font-body">
                     Click any card to spotlight it in the center
                   </p>
                 </div>
@@ -1081,7 +1078,7 @@ export default function AdminGallery({ onLogout }: AdminGalleryProps) {
                     )}
                     <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors" />
                     <div className="absolute bottom-2 left-2 right-2 text-left">
-                      <p className="text-[11px] font-medium text-white truncate">
+                      <p className="text-xs font-playfair font-serif font-heading text-white truncate tracking-wide">
                         {vid.title}
                       </p>
                       <p className="text-[9px] text-[#9a719d]/80 font-mono">
@@ -1118,10 +1115,10 @@ export default function AdminGallery({ onLogout }: AdminGalleryProps) {
                 <X size={18} />
               </button>
 
-              <h3 className="text-xl font-bold font-serif text-[#9a719d] mb-1">
+              <h3 className="text-xl font-playfair font-serif font-heading font-semibold text-[#9a719d] mb-1">
                 Change Password
               </h3>
-              <p className="text-zinc-400 text-xs mb-5">
+              <p className="text-zinc-400 text-xs mb-5 font-body">
                 Define a new master password for the admin portal
               </p>
 
@@ -1131,21 +1128,21 @@ export default function AdminGallery({ onLogout }: AdminGalleryProps) {
                     size={28}
                     className="mx-auto text-emerald-400 mb-2"
                   />
-                  <p className="font-semibold text-sm mb-1">
+                  <p className="font-semibold text-sm mb-1 font-sans">
                     Password Updated!
                   </p>
-                  <p>Your master password has been changed successfully.</p>
+                  <p className="font-body text-xs text-zinc-300">Your master password has been changed successfully.</p>
                 </div>
               ) : (
                 <form onSubmit={handleUpdatePassword} className="space-y-4">
                   {passwordError && (
-                    <div className="p-3 rounded-xl bg-rose-500/15 border border-rose-500/30 text-rose-300 text-xs">
+                    <div className="p-3 rounded-xl bg-rose-500/15 border border-rose-500/30 text-rose-300 text-xs font-sans">
                       {passwordError}
                     </div>
                   )}
 
                   <div>
-                    <label className="block text-xs font-medium text-[#9a719d] mb-1.5 uppercase tracking-wider">
+                    <label className="block text-xs font-medium text-[#9a719d] mb-1.5 uppercase tracking-wider font-sans">
                       New Password (Min 6 chars)
                     </label>
                     <input
@@ -1154,14 +1151,14 @@ export default function AdminGallery({ onLogout }: AdminGalleryProps) {
                       value={newPassword}
                       onChange={(e) => setNewPassword(e.target.value)}
                       placeholder="Enter new password"
-                      className="w-full px-4 py-3 bg-black/50 border border-[#9a719d]/30 rounded-xl text-white text-sm focus:outline-none focus:border-[#9a719d]"
+                      className="w-full px-4 py-3 bg-black/50 border border-[#9a719d]/30 rounded-xl text-white text-sm focus:outline-none focus:border-[#9a719d] font-sans"
                     />
                   </div>
 
                   <button
                     type="submit"
                     disabled={isUpdating || newPassword.length < 6}
-                    className="w-full bg-gradient-to-r from-[#9a719d] to-[#c293c6] hover:from-[#895f8c] hover:to-[#9a719d] text-white text-sm font-semibold py-3 rounded-full transition-all shadow-[0_0_15px_rgba(154,113,157,0.4)] cursor-pointer disabled:opacity-50"
+                    className="w-full bg-gradient-to-r from-[#9a719d] to-[#c293c6] hover:from-[#895f8c] hover:to-[#9a719d] text-white text-sm font-semibold py-3 rounded-full transition-all shadow-[0_0_15px_rgba(154,113,157,0.4)] cursor-pointer disabled:opacity-50 font-sans"
                   >
                     {isUpdating ? 'Saving...' : 'Update Password'}
                   </button>

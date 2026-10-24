@@ -13,6 +13,7 @@ const config: Config = {
         sans: ['var(--font-sans)', 'system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'sans-serif'],
         serif: ['var(--font-serif-display)', 'Georgia', 'Cambria', 'serif'],
         heading: ['var(--font-serif-display)', 'Georgia', 'Cambria', 'serif'],
+        playfair: ['var(--font-serif-display)', 'Playfair Display', 'Georgia', 'serif'],
         body: ['var(--font-serif-body)', 'Georgia', 'Cambria', 'serif'],
         subtitle: ['var(--font-sans)', 'system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'sans-serif'],
         serifDisplay: ['var(--font-serif-display)', 'Georgia', 'Cambria', 'serif'],
@@ -89,8 +90,8 @@ const config: Config = {
           },
         },
         marquee: {
-          '0%': { transform: 'translateX(0%)' },
-          '100%': { transform: 'translateX(-100%)' },
+          '0%': { transform: 'translateX(-100%)' },
+          '100%': { transform: 'translateX(0%)' },
         },
       },
       animation: {

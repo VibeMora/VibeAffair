@@ -293,7 +293,7 @@ export default function CTAFooter() {
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href="https://youtube.com/@vibeaffair?si=WIuwdCRp3vKs3ePl"
                     className="flex items-center gap-2.5 text-zinc-500 hover:text-zinc-800 text-xs transition-colors duration-200"
                   >
                     <Youtube size={14} />

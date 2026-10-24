@@ -376,14 +376,14 @@ export default function Testimonials({
                   {activeVideo.name}
                 </p>
               </div>
-              <a
+              {/* <a
                 href={normalizeMediaUrl(activeVideo.videoUrl || activeVideo.videoSrc || '')}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-xs text-[#a78bfa] hover:text-[#c4b5fd] underline underline-offset-2"
               >
                 Open directly ↗
-              </a>
+              </a> */}
             </div>
           </div>
         </div>

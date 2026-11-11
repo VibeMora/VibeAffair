@@ -119,7 +119,7 @@ export default function ContactUs({
           {/* Background image clearly visible */}
           {bgImageUrl && (
             <div
-              className={`absolute inset-0 bg-cover bg-center bg-no-repeat ${imageOpacity} transition-opacity duration-700`}
+              className={`absolute inset-0 bg-cover bg-[position:72.5%_55%] md:bg-center bg-no-repeat ${imageOpacity} transition-opacity duration-700`}
               style={{ backgroundImage: `url(${bgImageUrl})` }}
             />
           )}

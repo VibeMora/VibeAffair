@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   metadataBase: new URL('http://localhost:3000'),
-  title: 'Vibe Affair | Premium Event Planners',
+  title: 'Vibe Affair',
   description: 'Breaking free from the ordinary to create extraordinary, deeply personal event experiences.',
   icons: {
     icon: [
